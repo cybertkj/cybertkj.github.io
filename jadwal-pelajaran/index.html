@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Jadwal Pelajaran Kelas XII TKJ 2 SMK Pancasila 4 Baturetno">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/front.css">
+	<link rel="stylesheet" href="../css/landing.css">
+	<link rel="stylesheet" href="../css/icon.css">
+	<link rel="shortcut icon" href="../img/tkj.jpg">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Jadwal Pelajaran</title>
+	<script src="jam.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand font-weight-bold" href="#">XII TKJ 2</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav ml-auto">
+			    	<li class="nav-item active">
+			        	<a class="nav-link js-scroll-trigger" href="../">Home<span class="sr-only">(current)</span></a>
+			    	</li>
+			    	<li class="nav-item">
+			        	<a class="nav-link js-scroll-trigger" href="../daftar-siswa/">Daftar Siswa</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link js-scroll-trigger" href="../jadwal-pelajaran/">Jadwal Pelajaran</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link js-scroll-trigger" href="../jadwal-piket/">Jadwal Piket</a>
+			      	</li>
+			    </ul>
+			</div>
+		</div>
+	</nav>
+	<section class="students">
+		<div class="container">
+			<div class="section-header text-center">
+				<h1>Jadwal Pelajaran</h1>
+				<div class="divider mx-auto"></div>
+				<div class="waktu">
+					<br><p>Tanggal dan Waktu Sekarang</p>
+					<div class="times">
+						<p id="date"></p>
+						<p id="demo"></p>
+						<script type="text/javascript">
+							function showTime() {
+							    var a_p = "";
+							    var today = new Date();
+							    var curr_hour = today.getHours();
+							    var curr_minute = today.getMinutes();
+							    var curr_second = today.getSeconds();
+								    curr_hour = checkTime(curr_hour);
+								    curr_minute = checkTime(curr_minute);
+								    curr_second = checkTime(curr_second);
+								    document.getElementById('demo').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+								}
+								 
+								function checkTime(i) {
+								    if (i < 10) {
+								        i = "0" + i;
+								    }
+								    return i;
+								}
+								setInterval(showTime, 500);
+						</script>
+						<script>
+				            var date = new Date();
+							var tahun = date.getFullYear();
+							var bulan = date.getMonth();
+							var tanggal = date.getDate();
+							var hari = date.getDay();
+
+							switch(hari) {
+								case 0: hari = "Minggu"; break;
+								case 1: hari = "Senin"; break;
+								case 2: hari = "Selasa"; break;
+								case 3: hari = "Rabu"; break;
+								case 4: hari = "Kamis"; break;
+								case 5: hari = "Jum'at"; break;
+								case 6: hari = "Sabtu"; break;
+							}
+
+							switch(bulan) {
+								case 0: bulan = "Januari"; break;
+								case 1: bulan = "Februari"; break;
+								case 2: bulan = "Maret"; break;
+								case 3: bulan = "April"; break;
+								case 4: bulan = "Mei"; break;
+								case 5: bulan = "Juni"; break;
+								case 6: bulan = "Juli"; break;
+								case 7: bulan = "Agustus"; break;
+								case 8: bulan = "September"; break;
+								case 9: bulan = "Oktober"; break;
+								case 10: bulan = "November"; break;
+								case 11: bulan = "Desember"; break;
+							}
+
+							document.getElementById('date').innerHTML=hari + ", " + tanggal + " " + bulan + " " + tahun;
+				        </script>
+					</div>
+				</div>
+			</div>
+			<div class="section-body">
+				<div class="card mb-5">
+                		<div class="card-header">
+                    		<h3>Senin</h3>
+                		</div>
+                		<div class="card-body">
+                    		<div class="table-responsive">
+                        		<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>No</th>
+										<th>Mata Pelajaran</th>
+										<th>Jam</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Administrasi Sistem Jaringan</td>
+										<td>07.00 - 07.45</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Administrasi Sistem Jaringan</td>
+										<td>07.45 - 08.30</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Administrasi Sistem Jaringan</td>
+										<td>08.30 - 09.15</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Administrasi Sistem Jaringan</td>
+										<td>09.15 - 10.00</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Teknologi Layanan Jaringan</td>
+										<td>10.15 - 11.00</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Teknologi Layanan Jaringan</td>
+										<td>11.00 - 11.45</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Teknologi Layanan Jaringan</td>
+										<td>11.45 - 12.30</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>Teknologi Layanan Jaringan</td>
+										<td>12.30 - 13.15</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>Bahasa Inggris</td>
+										<td>13.30 - 14.15</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>Bahasa Inggris</td>
+										<td>15.00 - 15.45</td>
+									</tr>
+								</tbody>
+								</table>
+                    		</div>
+                		</div>
+            		</div>
+            		<div class="card mb-5">
+                		<div class="card-header">
+                    		<h3>Selasa</h3>
+                		</div>
+                		<div class="card-body">
+                    		<div class="table-responsive">
+                        		<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>No</th>
+										<th>Mata Pelajaran</th>
+										<th>Jam</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Teknologi Jaringan Berbasis Luas (WAN)</td>
+										<td>07.00 - 07.45</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Teknologi Jaringan Berbasis Luas (WAN)</td>
+										<td>07.45 - 08.30</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Teknologi Jaringan Berbasis Luas (WAN)</td>
+										<td>08.30 - 09.15</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Teknologi Jaringan Berbasis Luas (WAN)</td>
+										<td>09.15 - 10.00</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Administrasi Sistem Jaringan</td>
+										<td>10.15 - 11.00</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Administrasi Sistem Jaringan</td>
+										<td>11.00 - 11.45</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Matematika</td>
+										<td>11.45 - 12.30</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>Matematika</td>
+										<td>12.30 - 13.15</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>Matematika</td>
+										<td>13.30 - 14.15</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>Matematika</td>
+										<td>14.15 - 15.00</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>PPKn</td>
+										<td>15.00 - 15.45</td>
+									</tr>
+								</tbody>
+								</table>
+                    		</div>
+                		</div>
+            		</div>
+            		<div class="card mb-5">
+                		<div class="card-header">
+                    		<h3>Rabu</h3>
+                		</div>
+                		<div class="card-body">
+                    		<div class="table-responsive">
+                        		<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>No</th>
+										<th>Mata Pelajaran</th>
+										<th>Jam</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Teknologi Jaringan Berbasis Luas (WAN)</td>
+										<td>07.00 - 07.45</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Teknologi Jaringan Berbasis Luas (WAN)</td>
+										<td>07.45 - 08.30</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Teknologi Jaringan Berbasis Luas (WAN)</td>
+										<td>08.30 - 09.15</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Teknologi Jaringan Berbasis Luas (WAN)</td>
+										<td>09.15 - 10.00</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Teknologi Layanan Jaringan</td>
+										<td>10.15 - 11.00</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Teknologi Layanan Jaringan</td>
+										<td>11.00 - 11.45</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Teknologi Layanan Jaringan</td>
+										<td>11.45 - 12.30</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>Teknologi Layanan Jaringan</td>
+										<td>12.30 - 13.15</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>Administrasi Insfrastruktur Jaringan</td>
+										<td>13.30 - 14.15</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>Administrasi Infrastruktur Jaringan</td>
+										<td>14.15 - 15.00</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>Administrasi Infrastruktur Jaringan</td>
+										<td>15.00 - 15.45</td>
+									</tr>
+								</tbody>
+								</table>
+                    		</div>
+                		</div>
+            		</div>
+            		<div class="card mb-5">
+                		<div class="card-header">
+                    		<h3>Kamis</h3>
+                		</div>
+                		<div class="card-body">
+                    		<div class="table-responsive">
+                        		<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>No</th>
+										<th>Mata Pelajaran</th>
+										<th>Jam</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>PAIB</td>
+										<td>07.00 - 07.45</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>PAIB</td>
+										<td>07.45 - 08.30</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>PAIB</td>
+										<td>08.30 - 09.15</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Nasionalisme</td>
+										<td>09.15 - 10.00</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Bahasa Inggris</td>
+										<td>10.15 - 11.00</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Bahasa Inggris</td>
+										<td>11.00 - 11.45</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Bahasa Indonesia</td>
+										<td>11.45 - 12.30</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>Bahasa Indonesia</td>
+										<td>12.30 - 13.15</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>Administrasi Infrastruktur Jaringan</td>
+										<td>13.30 - 14.15</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>Administrasi Infrastruktur Jaringan</td>
+										<td>14.15 - 15.00</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>Administrasi Infrastruktur Jaringan</td>
+										<td>15.00 - 15.45</td>
+									</tr>
+								</tbody>
+								</table>
+                    		</div>
+                		</div>
+            		</div>
+            		<div class="card mb-5">
+                		<div class="card-header">
+                    		<h3>Jumat</h3>
+                		</div>
+                		<div class="card-body">
+                    		<div class="table-responsive">
+                        		<table class="table table-striped">
+                        		<thead>
+									<tr>
+										<th>No</th>
+										<th>Mata Pelajaran</th>
+										<th>Jam</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>PPKn</td>
+										<td>07.00 - 07.45</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Administrasi Sistem Jaringan</td>
+										<td>07.45 - 08.30</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Administrasi Sistem Jaringan</td>
+										<td>08.30 - 09.15</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Administrasi Infrastruktur Jaringan</td>
+										<td>09.15 - 10.00</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Administrasi Infrastruktur Jaringan</td>
+										<td>10.15 - 11.00</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Administrasi Infrastruktur Jaringan</td>
+										<td>11.00 - 11.45</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Bahasa Jawa</td>
+										<td>12.30 - 13.15</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>Bahasa Jawa</td>
+										<td>13.15 - 13.30</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>Nasionalisme</td>
+										<td>13.30 - 14.15</td>
+									</tr>
+								</tbody>
+								</table>
+                    		</div>
+                		</div>
+            		</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="row"> 
+				<div>&#169;2020 Made with <span style="color: red;">&#9829;</span> by <a href="https://ariardana.my.id">Ari Ardana</a></div>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
